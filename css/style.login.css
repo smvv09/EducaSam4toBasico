@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f0a535, #a1722a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* TARJETA */
+.container {
+    background: rgb(236, 188, 114);
+    padding: 30px;
+    border-radius: 20px;
+    width: 320px;
+    max-width: 350px;   
+    box-shadow: 5px 15px 25px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+/* LOGO */
+.logo {
+    width: 120px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+}
+
+/* INPUT */
+input {
+    padding: 12px;
+    margin: 10px 0;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 10px;
+    border: 1px solid #ecd2b3;
+}
+
+/* AVATARES */
+.avatars {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+        filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+}
+
+.avatars img {
+    width: 70px;
+    margin: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.avatars img:hover {
+    transform: scale(1.1);
+}
+
+.avatars img.selected {
+    border: 3px solid #5f9cd8;
+    transform: scale(1.15);
+}
+
+/* BOTÓN */
+button {
+    margin-top: 15px;
+    padding: 12px;
+    width: 100%;
+    background: linear-gradient(135deg, #cc3c3c, #991818);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* CONFETTI */
+.confetti {
+    position: fixed;
+    top: -10px;
+    z-index: 9999;
+    opacity: 0.9;
+    animation: caer 4s linear forwards;
+}
+
+@keyframes caer {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(var(--x)) rotate(720deg);
+        opacity: 0.6;
+    }
+}
+
+/* AVATAR BIENVENIDA */
+#avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-top: 10px;
+
+    /* sombra */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}

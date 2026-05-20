@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Figuras 2D</title>
+
+    <link rel="stylesheet" href="css/style.matematicas.css">
+
+    <link rel="icon" href="img/favicoon.png">
+
+</head>
+
+<body>
+
+    <!-- USUARIO SUPERIOR -->
+
+    <div class="usuario">
+
+        <img id="usuarioAvatar">
+
+        <span id="usuarioNombre"></span>
+
+    </div>
+
+    <!-- CONTENIDO -->
+
+    <div class="container">
+
+        <h1>Figuras Geométricas 2D</h1>
+
+        <!-- IMAGEN -->
+
+        <div class="imagen-container">
+
+            <img id="imagenFigura"
+                 src="img/figuras/circulo.png"
+                 onclick="hablarFiguraActual()">
+
+        </div>
+
+        <!-- BOTONES FIGURAS -->
+
+        <div class="figuras">
+
+            <button onclick="mostrarFigura('círculo')">
+                Círculo
+            </button>
+
+            <button onclick="mostrarFigura('cuadrado')">
+                Cuadrado
+            </button>
+
+            <button onclick="mostrarFigura('rectángulo')">
+                Rectángulo
+            </button>
+
+            <button onclick="mostrarFigura('triángulo')">
+                Triángulo
+            </button>
+
+            <button onclick="mostrarFigura('rombo')">
+                Rombo
+            </button>
+
+        </div>
+
+        <!-- BOTONES NAVEGACION -->
+
+        <div class="navegacion">
+
+            <button class="btn-volver" onclick="volverMenu()">
+                Volver
+            </button>
+
+            <button class="btn-siguiente" onclick="siguiente()">
+                Siguiente
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.figuras2d.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Figuras 3D</title>
+
+    <link rel="stylesheet" href="css/style.matematicas.css">
+
+    <link rel="icon" href="img/favicoon.png">
+
+</head>
+
+<body>
+
+    <!-- USUARIO SUPERIOR -->
+
+    <div class="usuario">
+
+        <img id="usuarioAvatar">
+
+        <span id="usuarioNombre"></span>
+
+    </div>
+
+    <!-- CONTENIDO -->
+
+    <div class="container">
+
+        <h1>Figuras Geométricas 3D</h1>
+
+        <!-- IMAGEN -->
+
+        <div class="imagen-container">
+
+            <img id="imagenFigura"
+                 src="img/figuras3d/cubo.png"
+                 onclick="hablarFiguraActual()">
+
+        </div>
+
+        <!-- BOTONES -->
+
+        <div class="figuras">
+
+            <button onclick="mostrarFigura('cubo')">
+                Cubo
+            </button>
+
+            <button onclick="mostrarFigura('esfera')">
+                Esfera
+            </button>
+
+            <button onclick="mostrarFigura('cono')">
+                Cono
+            </button>
+
+            <button onclick="mostrarFigura('cilindro')">
+                Cilindro
+            </button>
+
+            <button onclick="mostrarFigura('pirámide')">
+                Pirámide
+            </button>
+
+        </div>
+
+        <!-- NAVEGACIÓN -->
+
+        <div class="navegacion">
+
+            <button class="btn-volver" onclick="volverMenu()">
+                Volver
+            </button>
+
+            <button class="btn-siguiente" onclick="siguiente()">
+                Siguiente
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.figuras3d.js"></script>
+
+</body>
+
+</html>
