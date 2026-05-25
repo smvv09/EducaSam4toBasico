@@ -15,75 +15,97 @@
 
 <body>
 
-    <!-- USUARIO SUPERIOR -->
+<!-- USUARIO -->
 
-    <div class="usuario">
+<div class="usuario">
 
-        <img id="usuarioAvatar">
+    <img id="usuarioAvatar">
 
-        <span id="usuarioNombre"></span>
+    <span id="usuarioNombre"></span>
 
-    </div>
+</div>
 
-    <!-- CONTENIDO -->
+<!-- CONTENIDO -->
 
-    <div class="container">
+<div class="container">
 
-        <h1>Figuras Geométricas 2D</h1>
+    <h1>Figuras Geométricas 2D</h1>
 
-        <!-- IMAGEN -->
+    <p>
+        Aprende todas las figuras para desbloquear el juego 🎮
+    </p>
 
-        <div class="imagen-container">
+    <!-- IMAGEN -->
 
-            <img id="imagenFigura"
-                 src="img/figuras/circulo.png"
-                 onclick="hablarFiguraActual()">
+    <div class="imagen-container">
 
-        </div>
-
-        <!-- BOTONES FIGURAS -->
-
-        <div class="figuras">
-
-            <button onclick="mostrarFigura('círculo')">
-                Círculo
-            </button>
-
-            <button onclick="mostrarFigura('cuadrado')">
-                Cuadrado
-            </button>
-
-            <button onclick="mostrarFigura('rectángulo')">
-                Rectángulo
-            </button>
-
-            <button onclick="mostrarFigura('triángulo')">
-                Triángulo
-            </button>
-
-            <button onclick="mostrarFigura('rombo')">
-                Rombo
-            </button>
-
-        </div>
-
-        <!-- BOTONES NAVEGACION -->
-
-        <div class="navegacion">
-
-            <button class="btn-volver" onclick="volverMenu()">
-                Volver
-            </button>
-
-            <button class="btn-siguiente" onclick="siguiente()">
-                Siguiente
-            </button>
-
-        </div>
+        <img id="imagenFigura"
+             src="img/figuras2d/círculo.png"
+             onclick="hablarFiguraActual()">
 
     </div>
 
-    <script src="js/script.figuras2d.js"></script>
+    <!-- BOTONES -->
+
+    <div class="figuras">
+
+        <button id="btn-círculo"
+                onclick="mostrarFigura('círculo')">
+            Círculo
+        </button>
+
+        <button id="btn-cuadrado"
+                onclick="mostrarFigura('cuadrado')">
+            Cuadrado
+        </button>
+
+        <button id="btn-rectángulo"
+                onclick="mostrarFigura('rectángulo')">
+            Rectángulo
+        </button>
+
+        <button id="btn-triángulo"
+                onclick="mostrarFigura('triángulo')">
+            Triángulo
+        </button>
+
+        <button id="btn-rombo"
+                onclick="mostrarFigura('rombo')">
+            Rombo
+        </button>
+
+        <button id="btn-óvalo"
+                onclick="mostrarFigura('óvalo')">
+            Óvalo
+        </button>
+
+    </div>
+
+    <!-- NAVEGACION -->
+
+    <div class="navegacion">
+
+        <button class="btn-volver"
+                onclick="volverMenu()">
+            Volver
+        </button>
+
+        <button id="btnSiguiente"
+                class="btn-siguiente"
+                onclick="siguiente()"
+                disabled>
+            Siguiente
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CONFETTI -->
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script src="js/script.figuras2d.js"></script>
 
 </body>
 

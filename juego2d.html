@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Juego Figuras 2D</title>
+
+    <link rel="stylesheet" href="css/style.juego2d.css">
+
+</head>
+
+<body>
+
+<!-- USUARIO -->
+
+<div class="usuario">
+
+    <img id="usuarioAvatar">
+
+    <span id="usuarioNombre"></span>
+
+</div>
+
+<!-- CONTENEDOR -->
+
+<div class="container">
+
+    <h1>🎮 Juego Figuras 2D</h1>
+
+    <p>Arrastra cada nombre hacia la figura correcta</p>
+
+    <!-- FIGURAS -->
+
+    <div class="zona-juego">
+
+        <div class="tarjeta">
+
+            <img src="img/figuras2d/círculo.png">
+
+            <div class="dropzone" data-correcto="Círculo"></div>
+
+        </div>
+
+        <div class="tarjeta">
+
+            <img src="img/figuras2d/cuadrado.png">
+
+            <div class="dropzone" data-correcto="Cuadrado"></div>
+
+        </div>
+
+        <div class="tarjeta">
+
+            <img src="img/figuras2d/triángulo.png">
+
+            <div class="dropzone" data-correcto="Triángulo"></div>
+
+        </div>
+
+    </div>
+
+    <!-- RESPUESTAS -->
+
+    <div class="opciones" id="opciones">
+
+        <div class="drag" draggable="true">
+            Triángulo
+        </div>
+
+        <div class="drag" draggable="true">
+            Círculo
+        </div>
+
+        <div class="drag" draggable="true">
+            Cuadrado
+        </div>
+
+    </div>
+
+    <!-- REVISAR -->
+
+    <div class="revisar-container">
+
+        <button class="btn-revisar" onclick="revisarJuego()">
+            Revisar
+        </button>
+
+    </div>
+
+    <!-- NAVEGACION -->
+
+    <div class="navegacion">
+
+        <button class="btn-volver" onclick="volverMenu()">
+            Volver
+        </button>
+
+        <button class="btn-siguiente" onclick="siguienteNivel()">
+            Siguiente
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/script.juego2d.js"></script>
+
+</body>
+
+</html>

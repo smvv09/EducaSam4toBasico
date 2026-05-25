@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Juego Figuras 3D</title>
+
+    <link rel="stylesheet" href="css/style.juego3d.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎮 Figuras 3D</h1>
+
+<p>Arrastra la figura correcta al objeto real</p>
+
+<div class="objeto">
+
+    <img src="img/objetos/pelota.png">
+
+    <div class="dropzone" data-correcto="esfera"></div>
+
+</div>
+
+<div class="figuras">
+
+    <div class="drag" draggable="true" data-figura="cubo">
+        Cubo
+    </div>
+
+    <div class="drag" draggable="true" data-figura="esfera">
+        Esfera
+    </div>
+
+    <div class="drag" draggable="true" data-figura="cilindro">
+        Cilindro
+    </div>
+
+</div>
+
+<div class="botones">
+
+<button onclick="revisarJuego()">
+Revisar
+</button>
+
+<button class="volver" onclick="volverMenu()">
+Volver
+</button>
+
+</div>
+
+</div>
+
+<script src="js/script.juego3d.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+body{
+
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    background: linear-gradient(135deg, #f0a535, #a1722a);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+    margin: 0;
+}
+
+/* CONTENEDOR */
+
+.container{
+
+    background: rgb(236, 188, 114);
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    width: 900px;
+
+    max-width: 95%;
+
+    text-align: center;
+
+    box-shadow: 5px 15px 25px rgba(0,0,0,0.25);
+}
+
+/* TITULOS */
+
+h1{
+
+    color: #5a3317;
+}
+
+/* ZONA JUEGO */
+
+.zona-juego{
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+.tarjeta{
+
+    background: rgba(255,255,255,0.2);
+
+    padding: 20px;
+
+    border-radius: 20px;
+}
+
+.tarjeta img{
+
+    width: 180px;
+
+    height: 180px;
+
+    object-fit: contain;
+
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+}
+
+/* DROPZONE */
+
+.dropzone{
+
+    margin-top: 15px;
+
+    width: 180px;
+
+    height: 60px;
+
+    border: 3px dashed white;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 20px;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+/* OPCIONES */
+
+.opciones{
+
+    margin-top: 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.drag{
+
+    background: #8B5E3C;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 12px;
+
+    cursor: grab;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+.drag:hover{
+
+    transform: scale(1.05);
+}
+
+/* BOTONES */
+
+.botones{
+
+    margin-top: 35px;
+
+    display: flex;
+
+    gap: 20px;
+}
+
+button{
+
+    flex: 1;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    background: #2a9d2a;
+
+    color: white;
+}
+
+.volver{
+
+    background: #d62828;
+}
+
+/* USUARIO */
+
+.usuario{
+
+    position: fixed;
+
+    top: 15px;
+
+    left: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: rgba(255,255,255,0.15);
+
+    padding: 10px 15px;
+
+    border-radius: 50px;
+
+    backdrop-filter: blur(6px);
+}
+
+.usuario img{
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    border: 4px solid white;
+}
+
+.usuario span{
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}

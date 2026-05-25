@@ -1,0 +1,254 @@
+body{
+
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    background: linear-gradient(135deg, #f0a535, #a1722a);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 40px 0;
+
+    margin: 0;
+}
+
+/* CONTENEDOR */
+
+.container{
+
+    background: rgb(236, 188, 114);
+
+    width: 900px;
+
+    max-width: 95%;
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* TITULO */
+
+h1{
+
+    color: #5a3317;
+
+    margin-bottom: 10px;
+}
+
+p{
+
+    font-size: 20px;
+
+    margin-bottom: 40px;
+}
+
+/* FIGURAS */
+
+.zona-juego{
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    flex-wrap: wrap;
+}
+
+.tarjeta{
+
+    background: rgba(255,255,255,0.2);
+
+    padding: 20px;
+
+    border-radius: 20px;
+}
+
+.tarjeta img{
+
+    width: 180px;
+
+    height: 180px;
+
+    object-fit: contain;
+
+    margin-bottom: 20px;
+}
+
+/* CASILLAS */
+
+.dropzone{
+
+    width: 180px;
+
+    min-height: 65px;
+
+    border: 3px dashed white;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 5px;
+}
+
+/* RESPUESTAS */
+
+.opciones{
+
+    margin-top: 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+/* BOTONES DRAG */
+
+.drag{
+
+    background: #8B5E3C;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 12px;
+
+    cursor: grab;
+
+    font-size: 19px;
+
+    user-select: none;
+
+    transition: 0.2s;
+}
+
+.drag:hover{
+
+    transform: scale(1.05);
+}
+
+/* REVISAR */
+
+.revisar-container{
+
+    margin-top: 45px;
+}
+
+.btn-revisar{
+
+    background: #457b9d;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 30px;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+/* NAVEGACION */
+
+.navegacion{
+
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.btn-volver,
+.btn-siguiente{
+
+    border: none;
+
+    padding: 12px 28px;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.btn-volver{
+
+    background: #d62828;
+}
+
+.btn-siguiente{
+
+    background: #2a9d2a;
+}
+
+/* USUARIO */
+
+.usuario{
+
+    position: fixed;
+
+    top: 15px;
+
+    left: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: rgba(255,255,255,0.15);
+
+    padding: 10px 15px;
+
+    border-radius: 50px;
+
+    backdrop-filter: blur(6px);
+}
+
+.usuario img{
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    border: 3px solid white;
+}
+
+.usuario span{
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}

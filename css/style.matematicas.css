@@ -270,3 +270,11 @@ button:hover{
 
     text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
+/* BOTON BLOQUEADO */
+
+button:disabled{
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}

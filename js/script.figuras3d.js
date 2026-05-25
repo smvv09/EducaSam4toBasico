@@ -73,5 +73,5 @@ function siguiente(){
 
     speechSynthesis.cancel();
 
-    alert("Luego configuraremos esta sección");
+    window.location.href = "juego3d.html";
 }
