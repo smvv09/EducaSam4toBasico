@@ -10,7 +10,9 @@ body{
 
     align-items: center;
 
-    height: 100vh;
+    min-height: 100vh;
+
+    padding: 40px 0;
 
     margin: 0;
 }
@@ -21,27 +23,36 @@ body{
 
     background: rgb(236, 188, 114);
 
-    padding: 30px;
-
-    border-radius: 20px;
-
     width: 900px;
 
     max-width: 95%;
 
+    border-radius: 25px;
+
+    padding: 40px;
+
     text-align: center;
 
-    box-shadow: 5px 15px 25px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* TITULOS */
+/* TITULO */
 
 h1{
 
     color: #5a3317;
+
+    margin-bottom: 10px;
 }
 
-/* ZONA JUEGO */
+p{
+
+    font-size: 20px;
+
+    margin-bottom: 40px;
+}
+
+/* FIGURAS */
 
 .zona-juego{
 
@@ -49,11 +60,9 @@ h1{
 
     justify-content: center;
 
-    gap: 30px;
+    gap: 35px;
 
     flex-wrap: wrap;
-
-    margin-top: 30px;
 }
 
 .tarjeta{
@@ -73,18 +82,16 @@ h1{
 
     object-fit: contain;
 
-    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+    margin-bottom: 20px;
 }
 
-/* DROPZONE */
+/* CASILLAS */
 
 .dropzone{
 
-    margin-top: 15px;
-
     width: 180px;
 
-    height: 60px;
+    min-height: 65px;
 
     border: 3px dashed white;
 
@@ -96,18 +103,14 @@ h1{
 
     align-items: center;
 
-    font-size: 20px;
-
-    color: white;
-
-    font-weight: bold;
+    padding: 5px;
 }
 
-/* OPCIONES */
+/* RESPUESTAS */
 
 .opciones{
 
-    margin-top: 40px;
+    margin-top: 50px;
 
     display: flex;
 
@@ -118,21 +121,25 @@ h1{
     flex-wrap: wrap;
 }
 
+/* BOTONES DRAG */
+
 .drag{
 
     background: #8B5E3C;
 
     color: white;
 
-    padding: 15px 25px;
+    padding: 12px 22px;
 
     border-radius: 12px;
 
     cursor: grab;
 
-    font-size: 20px;
+    font-size: 19px;
 
-    transition: 0.3s;
+    user-select: none;
+
+    transition: 0.2s;
 }
 
 .drag:hover{
@@ -140,39 +147,65 @@ h1{
     transform: scale(1.05);
 }
 
-/* BOTONES */
+/* REVISAR */
 
-.botones{
+.revisar-container{
+
+    margin-top: 45px;
+}
+
+.btn-revisar{
+
+    background: #457b9d;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 30px;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+/* NAVEGACION */
+
+.navegacion{
 
     margin-top: 35px;
 
     display: flex;
 
-    gap: 20px;
+    justify-content: space-between;
 }
 
-button{
-
-    flex: 1;
-
-    padding: 15px;
+.btn-volver,
+.btn-siguiente{
 
     border: none;
 
+    padding: 12px 28px;
+
     border-radius: 12px;
 
-    font-size: 20px;
-
-    cursor: pointer;
-
-    background: #2a9d2a;
+    font-size: 18px;
 
     color: white;
+
+    cursor: pointer;
 }
 
-.volver{
+.btn-volver{
 
     background: #d62828;
+}
+
+.btn-siguiente{
+
+    background: #2a9d2a;
 }
 
 /* USUARIO */
@@ -189,7 +222,7 @@ button{
 
     align-items: center;
 
-    gap: 12px;
+    gap: 10px;
 
     background: rgba(255,255,255,0.15);
 
@@ -202,20 +235,20 @@ button{
 
 .usuario img{
 
-    width: 70px;
+    width: 60px;
 
-    height: 70px;
+    height: 60px;
 
     border-radius: 50%;
 
-    border: 4px solid white;
+    border: 3px solid white;
 }
 
 .usuario span{
 
     color: white;
 
-    font-size: 22px;
+    font-size: 20px;
 
     font-weight: bold;
 }

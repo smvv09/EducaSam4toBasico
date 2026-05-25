@@ -13,8 +13,6 @@ window.onload = function(){
 
 let elementoArrastrado = null;
 
-let nivelCompletado = false;
-
 function iniciarDrag(){
 
     const drags = document.querySelectorAll(".drag");
@@ -60,20 +58,9 @@ function iniciarDrag(){
 
         opciones.appendChild(elementoArrastrado);
     });
-
-    // DESACTIVAR BOTON SIGUIENTE
-    let btn = document.querySelector(".btn-siguiente");
-
-    btn.disabled = true;
-
-    btn.style.opacity = "0.5";
-
-    btn.style.cursor = "not-allowed";
 }
 
-/* ========================= */
 /* HABLAR */
-/* ========================= */
 
 function hablar(texto){
 
@@ -88,9 +75,7 @@ function hablar(texto){
     speechSynthesis.speak(voz);
 }
 
-/* ========================= */
 /* REVISAR */
-/* ========================= */
 
 function revisarJuego(){
 
@@ -118,43 +103,30 @@ function revisarJuego(){
 
     if(correctas === zones.length){
 
-        nivelCompletado = true;
+        hablar("Excelente trabajo. Completaste el nivel 2");
 
-        hablar("Excelente trabajo. Todas las respuestas son correctas");
-
-        alert("🎉 ¡Nivel completado!");
-
-        let btn = document.querySelector(".btn-siguiente");
-
-        btn.disabled = false;
-
-        btn.style.opacity = "1";
-
-        btn.style.cursor = "pointer";
-
-    }else{
+        alert("🎉 ¡Nivel 2 completado!");
+    }
+    else{
 
         hablar("Algunas respuestas están incorrectas");
     }
 }
 
-/* ========================= */
 /* BOTONES */
-/* ========================= */
 
-function volverMenu(){
+function volverNivel1(){
 
-    window.location.href = "figuras3d.html";
+    window.location.href = "juego3d.html";
 }
 
-function siguienteNivel(){
+function finalizarJuego(){
 
-    if(!nivelCompletado){
+    hablar("Felicitaciones. Terminaste el juego de figuras tres D");
 
-        hablar("Primero debes completar correctamente el nivel");
+    setTimeout(() => {
 
-        return;
-    }
+        window.location.href = "figuras3d.html";
 
-    window.location.href = "juego3d_nivel2.html";
+    }, 3000);
 }

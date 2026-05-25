@@ -17,6 +17,8 @@ window.onload = function(){
 
 let elementoArrastrado = null;
 
+let nivelCompletado = false;
+
 function iniciarDrag(){
 
     const drags = document.querySelectorAll(".drag");
@@ -40,7 +42,6 @@ function iniciarDrag(){
 
         zone.addEventListener("drop", () => {
 
-            // SI YA HAY ALGO
             if(zone.children.length > 0){
 
                 let existente = zone.children[0];
@@ -52,7 +53,6 @@ function iniciarDrag(){
         });
     });
 
-    // VOLVER OPCIONES
     const opciones = document.getElementById("opciones");
 
     opciones.addEventListener("dragover", e => {
@@ -64,6 +64,15 @@ function iniciarDrag(){
 
         opciones.appendChild(elementoArrastrado);
     });
+
+    // BOTON SIGUIENTE DESACTIVADO
+    let btn = document.querySelector(".btn-siguiente");
+
+    btn.disabled = true;
+
+    btn.style.opacity = "0.5";
+
+    btn.style.cursor = "not-allowed";
 }
 
 /* ========================= */
@@ -113,11 +122,21 @@ function revisarJuego(){
 
     if(correctas === zones.length){
 
+        nivelCompletado = true;
+
         hablar("Excelente trabajo. Todas las respuestas son correctas");
 
         alert("🎉 ¡Nivel completado!");
-    }
-    else{
+
+        let btn = document.querySelector(".btn-siguiente");
+
+        btn.disabled = false;
+
+        btn.style.opacity = "1";
+
+        btn.style.cursor = "pointer";
+
+    }else{
 
         hablar("Algunas respuestas están incorrectas. Intenta nuevamente");
     }
@@ -133,6 +152,13 @@ function volverMenu(){
 }
 
 function siguienteNivel(){
+
+    if(!nivelCompletado){
+
+        hablar("Primero debes completar correctamente el nivel");
+
+        return;
+    }
 
     window.location.href = "juego2d_nivel2.html";
 }

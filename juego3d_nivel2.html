@@ -5,15 +5,13 @@
 
     <meta charset="UTF-8">
 
-    <title>Juego Figuras 3D</title>
+    <title>Juego Figuras 3D - Nivel 2</title>
 
     <link rel="stylesheet" href="css/style.juego3d.css">
 
 </head>
 
 <body>
-
-<!-- USUARIO -->
 
 <div class="usuario">
 
@@ -23,63 +21,43 @@
 
 </div>
 
-<!-- CONTENEDOR -->
-
 <div class="container">
 
-    <h1>🎮 Juego Figuras 3D</h1>
+    <h1>🎮 Juego Figuras 3D - Nivel 2</h1>
 
     <p>Arrastra cada nombre hacia la figura correcta</p>
-
-    <!-- FIGURAS -->
 
     <div class="zona-juego">
 
         <div class="tarjeta">
 
-            <img src="img/objetos/pelota.png">
+            <img src="img/objetos/cono.png">
 
-            <div class="dropzone" data-correcto="Esfera"></div>
-
-        </div>
-
-        <div class="tarjeta">
-
-            <img src="img/objetos/dado.png">
-
-            <div class="dropzone" data-correcto="Cubo"></div>
+            <div class="dropzone" data-correcto="Cono"></div>
 
         </div>
 
         <div class="tarjeta">
 
-            <img src="img/objetos/lata.png">
+            <img src="img/objetos/piramide.png">
 
-            <div class="dropzone" data-correcto="Cilindro"></div>
+            <div class="dropzone" data-correcto="Pirámide"></div>
 
         </div>
 
     </div>
-
-    <!-- RESPUESTAS -->
 
     <div class="opciones" id="opciones">
 
         <div class="drag" draggable="true">
-            Cubo
+            Pirámide
         </div>
 
         <div class="drag" draggable="true">
-            Esfera
-        </div>
-
-        <div class="drag" draggable="true">
-            Cilindro
+            Cono
         </div>
 
     </div>
-
-    <!-- REVISAR -->
 
     <div class="revisar-container">
 
@@ -89,23 +67,21 @@
 
     </div>
 
-    <!-- NAVEGACION -->
-
     <div class="navegacion">
 
-        <button class="btn-volver" onclick="volverMenu()">
+        <button class="btn-volver" onclick="volverNivel1()">
             Volver
         </button>
 
-        <button class="btn-siguiente" onclick="siguienteNivel()">
-            Siguiente
+        <button class="btn-siguiente" onclick="finalizarJuego()">
+            Finalizar
         </button>
 
     </div>
 
 </div>
 
-<script src="js/script.juego3d.js"></script>
+<script src="js/script.juego3d_nivel2.js"></script>
 
 </body>
 

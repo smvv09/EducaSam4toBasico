@@ -15,75 +15,92 @@
 
 <body>
 
-    <!-- USUARIO SUPERIOR -->
+<!-- USUARIO -->
 
-    <div class="usuario">
+<div class="usuario">
 
-        <img id="usuarioAvatar">
+    <img id="usuarioAvatar">
 
-        <span id="usuarioNombre"></span>
+    <span id="usuarioNombre"></span>
 
-    </div>
+</div>
 
-    <!-- CONTENIDO -->
+<!-- CONTENIDO -->
 
-    <div class="container">
+<div class="container">
 
-        <h1>Figuras Geométricas 3D</h1>
+    <h1>Figuras Geométricas 3D</h1>
 
-        <!-- IMAGEN -->
+    <p>
+        Aprende todas las figuras para desbloquear el juego 🎮
+    </p>
 
-        <div class="imagen-container">
+    <!-- IMAGEN -->
 
-            <img id="imagenFigura"
-                 src="img/figuras3d/cubo.png"
-                 onclick="hablarFiguraActual()">
+    <div class="imagen-container">
 
-        </div>
-
-        <!-- BOTONES -->
-
-        <div class="figuras">
-
-            <button onclick="mostrarFigura('Cubo')">
-                Cubo
-            </button>
-
-            <button onclick="mostrarFigura('Esfera')">
-                Esfera
-            </button>
-
-            <button onclick="mostrarFigura('Cono')">
-                Cono
-            </button>
-
-            <button onclick="mostrarFigura('Cilindro')">
-                Cilindro
-            </button>
-
-            <button onclick="mostrarFigura('Pirámide')">
-                Pirámide
-            </button>
-
-        </div>
-
-        <!-- NAVEGACIÓN -->
-
-        <div class="navegacion">
-
-            <button class="btn-volver" onclick="volverMenu()">
-                Volver
-            </button>
-
-            <button class="btn-siguiente" onclick="siguiente()">
-                Siguiente
-            </button>
-
-        </div>
+        <img id="imagenFigura"
+             src="img/figuras3d/cubo.png"
+             onclick="hablarFiguraActual()">
 
     </div>
 
-    <script src="js/script.figuras3d.js"></script>
+    <!-- BOTONES -->
+
+    <div class="figuras">
+
+        <button id="btn-cubo"
+                onclick="mostrarFigura('cubo')">
+            Cubo
+        </button>
+
+        <button id="btn-esfera"
+                onclick="mostrarFigura('esfera')">
+            Esfera
+        </button>
+
+        <button id="btn-cono"
+                onclick="mostrarFigura('cono')">
+            Cono
+        </button>
+
+        <button id="btn-cilindro"
+                onclick="mostrarFigura('cilindro')">
+            Cilindro
+        </button>
+
+        <button id="btn-pirámide"
+                onclick="mostrarFigura('pirámide')">
+            Pirámide
+        </button>
+
+    </div>
+
+    <!-- NAVEGACION -->
+
+    <div class="navegacion">
+
+        <button class="btn-volver"
+                onclick="volverMenu()">
+            Volver
+        </button>
+
+        <button id="btnSiguiente"
+                class="btn-siguiente"
+                onclick="siguiente()"
+                disabled>
+            Siguiente
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CONFETTI -->
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script src="js/script.figuras3d.js"></script>
 
 </body>
 
